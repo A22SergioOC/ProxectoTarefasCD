@@ -34,6 +34,14 @@ public class App{
 
     public static void main(String[] args) {
         menuMembro();
-
+        if(sudoer){
+        
+        }else{
+            System.out.println("Que quieres hacer: ");
+            System.out.println("    1. Fichar horas: ");
+            System.out.println("    2. Marcar como completada unha tarea: ");
+            System.out.println("    3. Crear unha tarefa nova: ");
+            //Para el siguiente dia hay que modificar tarea para tener estado de completado.
+        }
     }
 }
