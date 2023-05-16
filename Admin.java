@@ -1,12 +1,13 @@
-ipackage com.mycompany.oscartarefa;
-
 import java.util.ArrayList;
+
 /**
  *
  * @author A22OscarNM
  */
 public class Admin extends Membro{
-    private ArrayList<Proxecto> proxectos;
+    private String nomeMembro;
+    private Equipo equipo;
+    private int horasTraballadas;
     
     public Admin(String nomeMembro){
         super(nomeMembro);
@@ -28,10 +29,10 @@ public class Admin extends Membro{
     }
     
     public void removeOfEquipo(Membro membro, Equipo equipo){
-        equipo.getMembrosEquipo.remove(membro);
+        equipo.getMembrosEquipo().remove(membro);
     }
     
     public void addToEquipo(Membro membro, Equipo equipo){
-        equipo.getMembrosEquipo.add(membro);
+        equipo.getMembrosEquipo().add(membro);
     }
 }

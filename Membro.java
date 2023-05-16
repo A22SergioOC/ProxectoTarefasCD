@@ -1,3 +1,9 @@
+
+/**
+ *
+ * @author A22OscarNM
+ */
+
 public class Membro {
 
     private String nomeMembro;

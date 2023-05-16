@@ -1,45 +1,25 @@
-import java.util.ArrayList;
-
 public class Tarefa {
 
-    private ArrayList<Membro> membrosTarefa;
     private int horasTotales;
     private int horasConsumidas;
+    private Proxecto proxectoTarefa;
 
-    public Tarefa(ArrayList<Membro> membrosTarefa, int horasTotales, int horasConsumidas) {
-        this.membrosTarefa = membrosTarefa;
+    public Tarefa(Proxecto proxecto, int horasTotales, int horasConsumidas) {
+        this.proxectoTarefa = proxecto;
         this.horasTotales = horasTotales;
         this.horasConsumidas = horasConsumidas;
-    }
-
-    public boolean addMembroTarefa(Membro membro) {
-        if (membrosTarefa != null) {
-            membrosTarefa.add(membro);
-            return true;
-        }
-
-        return false;
-    }
-
-    public boolean removeMembroTarefa(Membro membro) {
-        if (membrosTarefa != null && !membrosTarefa.isEmpty()) {
-            membrosTarefa.remove(membro);
-            return true;
-        }
-
-        return false;
     }
 
     public void addHorasConsumidas(int horas) {
         this.horasConsumidas += horas;
     }
 
-    public ArrayList<Membro> getMembrosTarefa() {
-        return membrosTarefa;
+    public Proxecto getProxectoTarefa() {
+        return proxectoTarefa;
     }
 
-    public void setMembrosTarefa(ArrayList<Membro> membrosTarefa) {
-        this.membrosTarefa = membrosTarefa;
+    public void setProxectoTarefa(Proxecto proxecto) {
+        this.proxectoTarefa = proxecto;
     }
 
     public int getHorasTotales() {

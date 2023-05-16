@@ -5,7 +5,7 @@ public class Proxecto {
     private String nomeProxecto;
     private Cliente cliente;
     private int horasTotales;
-    private ArrayList<Membro> membrosProxecto;
+    private ArrayList<Equipo> equiposProxecto;
 
     public Proxecto(String nomeProxecto, Cliente cliente, int horasTotales) {
         this.nomeProxecto = nomeProxecto;
@@ -37,28 +37,24 @@ public class Proxecto {
         this.horasTotales = horasTotales;
     }
 
-    public ArrayList<Membro> getMembrosProxecto() {
-        return membrosProxecto;
+    public ArrayList<Equipo> getEquiposProxecto() {
+        return equiposProxecto;
     }
 
-    public void setMembrosProxecto(ArrayList<Membro> membrosProxecto) {
-        this.membrosProxecto = membrosProxecto;
-    }
+    public boolean addEquipoProxecto(Equipo equipo) {
 
-    public boolean addMembroProxecto(Membro membro) {
-
-        if (membrosProxecto != null) {
-            membrosProxecto.add(membro);
+        if (equiposProxecto != null) {
+            equiposProxecto.add(equipo);
             return true;
         }
 
         return false;
     }
 
-    public boolean removeMembroProxecto(Membro membro) {
+    public boolean removeEquipoProxecto(Equipo equipo) {
 
-        if (membrosProxecto != null && !membrosProxecto.isEmpty()) {
-            membrosProxecto.remove(membro);
+        if (equiposProxecto != null && !equiposProxecto.isEmpty()) {
+            equiposProxecto.remove(equipo);
             return true;
         }
 
